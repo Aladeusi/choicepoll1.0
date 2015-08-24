@@ -1,0 +1,76 @@
+<Files .htaccess>
+order allow,deny
+</Files>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#RewriteEngine On
+
+Options +FollowSymLinks
+
+
+
+RewriteEngine On
+
+
+#RewriteCond %{REQUEST_FILENAME} !-f
+
+#RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+
+RewriteRule ^(\w+)$ $1.php
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#handing error with htaccess and redirecting to custom error page errorpage.php
+
+ErrorDocument 400 /errorpage.php
+ErrorDocument 401 /errorpage.php
+ErrorDocument 403 /errorpage.php
+ErrorDocument 404 /errorpage.php
+ErrorDocument 500 /errorpage.php
+ErrorDocument 502 /errorpage.php
+ErrorDocument 504 /errorpage.php
+
+#handing error with htaccess
+
+
+
+
+
+
+
+
+
+
+
+#hidding directory content from public incase directory url is entered
+
+IndexIgnore *
+
+#hidding directory content from public incase directory url is entered
